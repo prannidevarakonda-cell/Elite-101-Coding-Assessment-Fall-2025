@@ -57,7 +57,7 @@ def checkout_book(books, book_id):
                 # Set due date to 2 weeks from now
                 today = datetime.now()
                 due_date = today + timedelta(days=14)
-                book["due_date"] = due_date.strftime("%Y-%m-%d")
+                book["due_date"] = due_date.strftime("%Y-%m-%d") # Thank you for w3schools.com for teaching me about the datetime and how to properly set it
                 book["checkouts"] = book["checkouts"] + 1  # increment checkout counter
                 print(f"You checked out '{book['title']}'. Be careful as the due date is: {book['due_date']}")
                 break  # we found it, so let's get out of here
