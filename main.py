@@ -17,7 +17,26 @@ def available_books(books):
 # TODO: Create a function to search books by author OR genre
 # Search should be case-insensitive
 # Return a list of matching books
+def search_books(books, term):
+    term = term.lower()
+    print("Search Results For:")
+    print("-----------------------")
 
+    found_book = False
+
+    for book in books:
+        author = book["author"].lower()
+        genre = book["genre"].lower()
+
+        if term in author or term in genre:
+            print(f"{book['id']} {book['genre']} - {book['title']} by {book['author']}")
+            found_book = True
+
+    if not found_book:
+        print("Sorry, we couldn't find any books based on your search.")
+
+            
+# Writing a statement if they couldn't find your search
 
 # -------- Level 3 --------
 # TODO: Create a function to checkout a book by ID
