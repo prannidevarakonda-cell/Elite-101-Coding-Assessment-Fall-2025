@@ -8,7 +8,7 @@ def available_books(books):
     print("Available_books:")
     print("---------------------------------------------------------")
     for book in books:
-        if book = ["available"]:
+        if book["available"]:
             print(f"{book['id']} - {book['title']} by {book['author']}")
         # Checking if the book is available
 
